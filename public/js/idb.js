@@ -69,9 +69,9 @@ function uploadBudget() {
                     // open one more transaction
                     const transaction = db.transaction(['new_budget'], 'readwrite');
                     // access the new_pizza object store
-                    const pizzaObjectStore = transaction.objectStore('new_budget');
+                    const budgetObjectStore = transaction.objectStore('new_budget');
                     // clear all items in your store
-                    pizzaObjectStore.clear();
+                    budgetObjectStore.clear();
 
                     alert('All saved transactions have been submitted!');
                 })
